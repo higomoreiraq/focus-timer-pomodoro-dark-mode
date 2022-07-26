@@ -1,0 +1,507 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  transition: 500ms; 
+  }
+
+.page {
+  height: 100vh;
+  background: #FFFFFF;
+  display: grid;
+  padding-bottom: 1rem;
+  transition: 500ms;
+}
+
+.icon-mode {
+  display: flex;
+  justify-self: end;
+  margin-top: 6rem;
+  margin-right: 6rem;
+  animation: topDown 1s 500ms backwards;
+}
+
+.icon-mode button {
+  border-radius: 50%;
+  background: none;
+  width: 4.7rem;
+  height: 4.7rem;
+}
+
+.icon-mode button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-mode button:hover svg path {
+  fill: #02799D;
+}
+
+main {
+  width: 82.1rem;
+  margin: 3.3rem auto 6rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: topDown 1s;
+}
+
+.display{
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls svg {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.timer {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  color: #323238;
+  transition: 500ms;
+}
+
+.cards {
+  display: grid;
+  grid-template-areas: "A B"
+  "C D";
+  gap: 3.2rem;
+}
+
+.cards div:nth-child(1) {
+  grid-area: A;
+}
+
+.cards div:nth-child(2) {
+  grid-area: B;
+}
+
+.cards div:nth-child(3) {
+  grid-area: C;
+}
+
+.cards div:nth-child(4) {
+  grid-area: D;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 500ms;
+  
+}
+
+.cards button:hover,
+footer button:hover,
+.icon-mode button:hover {
+  transform: scale(1.1);
+}
+
+.controls button {
+  background: none;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.controls button svg:hover path {
+  fill: #02799D;
+}
+
+.controls .btnClicked,
+.icon-mode .btnClicked {
+  background: #02799D;
+  border-radius: 100%;
+  border: 3px solid #02799D;
+}
+
+.controls .btnClicked svg path,
+.icon-mode .btnClicked svg path {
+  fill: #FFFFFF;
+}
+
+.controls .btnClicked:hover svg path,
+.icon-mode .btnClicked:hover svg path {
+  fill: #FFFFFF;
+}
+
+.cards button {
+  margin: 0;
+  padding: 0;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  position: relative;
+  background: #E1E1E6;
+  transition: 500ms;
+}
+
+.cards button svg {
+  padding: 4.8rem 4.7rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+}
+
+.cards button:hover svg path {
+  fill: #02799D;
+}
+
+.cards .btnClicked {
+  background: #02799D;
+}
+
+.cards .btnClicked svg path {
+  fill:#FFFFFF;
+}
+
+.cards .btnClicked:hover svg path {
+  fill:#FFFFFF;
+}
+
+.volume-control {
+  -webkit-appearance: none;
+  width: 90px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #323238;
+  position: absolute;
+  left: 2.4rem;
+  right: 2.4rem;
+  top: 11.8rem;
+  cursor: grab;
+}
+
+.volume-control::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #323238;
+  border-radius: 50%;
+  cursor: grab;
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(50, 50, 56, 0.2);
+}
+
+.cards button:hover .volume-control {
+  background: #02799D;
+}
+
+.cards button:hover .volume-control::-webkit-slider-thumb {
+  background: #02799D;
+}
+
+.volume-control::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 5px rgba(2, 121, 157, 0.2);
+}
+
+.volume-control:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 7px rgba(2, 121, 157, 0.3);
+  cursor: grabbing;
+}
+
+.cards .btnClicked .volume-control {
+  background: #FFFFFF;
+}
+
+.cards .btnClicked:hover .volume-control {
+  background: #FFFFFF;
+}
+
+.cards .btnClicked .volume-control::-webkit-slider-thumb {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 5px rgba(50, 50, 56, 0.2);
+}
+
+.cards .btnClicked:hover .volume-control::-webkit-slider-thumb {
+  background: #FFFFFF;
+}
+
+.cards .btnClicked .volume-control::-webkit-slider-thumb:hover {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 5px rgb(255, 255, 255, 0.1);
+}
+
+.cards .btnClicked:hover .volume-control:active::-webkit-slider-thumb {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 7px rgb(255, 255, 255, 0.1);
+  cursor: grabbing;
+}
+
+.footer {
+  display: grid;
+  justify-self: center;
+  align-self: start;
+  animation: downTop 1s 500ms backwards;
+}
+
+.footer button {
+  background: #02799D;
+  border: 5px solid #02799D;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  box-sizing: border-box;
+}
+
+.footer button svg {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.footer button:hover svg path {
+  fill: #FFFFFF;
+}
+
+.footer .soundClicked{
+  background: none;
+  border: none;
+}
+
+.footer .soundClicked svg path {
+  fill: #323238;
+}
+
+.footer .soundClicked:hover svg path {
+  fill: #02799D;
+}
+
+/* DARK MODE */
+.body-dark {
+  background: #121214;
+  transition: 500ms;
+}
+
+.page-dark {
+  background: #121214;
+  transition: 500ms;
+}
+
+.icon-mode-dark button:hover svg path {
+  fill: #0A485C;
+}
+
+.icon-mode-dark .btnClicked {
+  background: #0A3442;
+  border-radius: 100%;
+  border: 3px solid #0A3442;
+  box-sizing: border-box;
+}
+
+.icon-mode-dark .btnClicked svg path {
+  fill: #FFFFFF;
+}
+
+.icon-mode-dark .btnClicked:hover svg path {
+  fill: #FFFFFF;
+}
+
+.timer-dark {
+  color: #FFFFFF;
+}
+
+.controls-dark button svg path {
+  fill: #C4C4CC;
+}
+
+.controls-dark button svg:hover path {
+  fill: #0A485C;
+}
+
+.controls-dark .btnClicked {
+  background: #0A3442;
+  border-radius: 100%;
+  border: 3px solid #0A3442;
+}
+
+.controls-dark .btnClicked svg path {
+  fill: #FFFFFF;
+}
+
+.controls .btnClicked svg:hover path {
+  fill: #FFFFFF;
+}
+
+.cards-dark button {
+  background: #29292E;
+}
+
+.cards-dark button svg path,
+.footer-dark .soundClicked svg path {
+  fill: #C4C4CC;
+}
+
+.cards-dark button:hover svg path {
+  fill: #0A485C;
+}
+
+.cards-dark .btnClicked {
+  background: #0A3442;
+}
+
+.cards-dark .volume-control {
+  background: #FFFFFF;
+}
+
+.cards-dark .volume-control::-webkit-slider-thumb {
+  background: #FFFFFF;
+}
+
+.cards-dark button:hover .volume-control {
+  background: #0A485C;
+}
+
+.cards-dark button:hover .volume-control::-webkit-slider-thumb {
+  background: #0A485C;
+}
+
+.cards-dark .volume-control::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 5px rgb(10, 72, 92, 0.2);
+}
+
+.cards-dark .volume-control:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 7px rgb(10, 72, 92, 0.2);
+}
+
+.footer-dark button {
+  background: #0A3442;
+  border: 5px solid #0A3442;
+  box-sizing: border-box;
+}
+
+.footer-dark .soundClicked:hover svg path {
+  fill: #0A485C;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page {
+    width: 100%;
+    height: 100vh;
+    max-height: 66.7rem;
+  }
+
+  .icon-mode {
+    justify-self: center;
+    margin-top: 2rem;
+    margin-right: 0;
+  }
+
+  main {
+    max-width: 29.1rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    animation: none;
+  }
+
+  .display {
+    display: flex;
+    width: 27.1rem;
+  }
+
+  .display .timer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 9rem;
+    line-height: 10rem;
+  }
+
+  .display {
+    max-width: 29.6rem;
+    gap: 3px;
+    animation: topDown 1s;
+  }
+
+  .cards {
+    gap: 1.5rem;
+    justify-content: space-between;
+    animation: downTop 1s 500ms backwards;
+  }
+  
+  .cards button {
+    width: 12.8rem;
+    height: 13.2rem;
+  }
+
+  .cards button svg {
+    padding: 4.5rem 4rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .volume-control {
+    width: 80px;
+    height: 3px;
+    top: 10rem;
+  }
+}
+
+/* Animações */
+@keyframes topDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downTop {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
