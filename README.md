@@ -2,7 +2,10 @@
 
 Aplicação de um temporizador que aplica a técnica de estudos Pomodoro com a funcionalidade de substituição do tema entre claro e escuro.
 
+- Light mode
 ![image](https://user-images.githubusercontent.com/107502907/192099263-5a9bbcad-4ea3-4936-bc81-39822f56659a.png)
+
+- Dark mode
 ![image](https://user-images.githubusercontent.com/107502907/192099287-a5002cf4-0a7d-452f-a938-3e60951e0c8e.png)
 
 ## Descrição
