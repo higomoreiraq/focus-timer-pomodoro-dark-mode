@@ -1,4 +1,4 @@
-# Focus Timer Pomodoro - Dark Mode
+# Focus Timer Pomodoro ⏱ - Dark Mode
 
 Aplicação de um temporizador que aplica a técnica de estudos Pomodoro com a funcionalidade de substituição do tema entre claro e escuro.
 
@@ -117,7 +117,7 @@ Dark mode ativado, temporizador encerrado, piscam-se os botões do controlador e
 #
 # 🌎 English
 
-# Focus Timer Pomodoro
+# Focus Timer Pomodoro ⏱ - Dark Mode
 
 Application of a timer that applies the Pomodoro study technique.
 
